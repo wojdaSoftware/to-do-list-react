@@ -1,24 +1,29 @@
-import logo from './logo.svg';
 import './App.css';
+import React from 'react';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+    <React.Fragment>
+      <header className="header">
+        <h1>To-do list</h1>
       </header>
-    </div>
+      <main className="main">
+        <section className="section">
+          <h2 className="section__title">Add a new task</h2>
+          <form className="form">
+            <input className="form__textInput" name="task" placeholder="What has to be done?" />
+            <button className="form__button">Add the task</button>
+          </form>
+        </section>
+        <section className="section">
+          <header className="header header--second">
+            <h2 className="header__title">Task list</h2>
+            <div className="header__gridContainer" />
+          </header>
+          <ul className="list" />
+        </section>
+      </main>
+    </React.Fragment>
   );
 }
 
