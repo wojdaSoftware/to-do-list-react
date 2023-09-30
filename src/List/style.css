@@ -1,0 +1,49 @@
+.list {
+    padding: 0px 20px 20px 20px;
+    list-style: none;
+}
+
+.list__listItem {
+    border-bottom: rgb(226, 226, 226) solid 2px;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    gap: 20px;
+}
+
+.list__listItem--hidden {
+    display: none;
+}
+
+.list__button {
+    border: none;
+    border-radius: 0;
+    background-color: green;
+    display: block;
+    width: 35px;
+    height: 35px;
+    align-self: center;
+    color: white;
+    padding: 3px 0 0 0;
+    transition: 500ms;
+}
+
+.list__button:hover {
+    background-color: rgb(0, 153, 0);
+}
+
+.list__button--second {
+    background-color: red;
+    transition: 500ms;
+}
+
+.list__button--second:hover {
+    background-color: rgb(255, 51, 51);
+}
+
+.list__paragragh {
+    overflow-x: hidden;
+}
+
+.list__paragraph--marked {
+    text-decoration: line-through;
+}

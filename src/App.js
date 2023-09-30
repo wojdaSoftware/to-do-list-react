@@ -1,5 +1,12 @@
-import './App.css';
 import React from 'react';
+import Form from './Form';
+import List from './List';
+
+const tasks = [
+  { id: 1, content: "Spać", done: false },
+  { id: 2, content: "Grać", done: true },
+];
+const hideFinished = false;
 
 function App() {
   return (
@@ -10,17 +17,14 @@ function App() {
       <main className="main">
         <section className="section">
           <h2 className="section__title">Add a new task</h2>
-          <form className="form">
-            <input className="form__textInput" name="task" placeholder="What has to be done?" />
-            <button className="form__button">Add the task</button>
-          </form>
+          <Form />
         </section>
         <section className="section">
           <header className="header header--second">
             <h2 className="header__title">Task list</h2>
             <div className="header__gridContainer" />
           </header>
-          <ul className="list" />
+          <List tasks={tasks} hideFinished={hideFinished} />
         </section>
       </main>
     </React.Fragment>
