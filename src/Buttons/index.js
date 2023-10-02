@@ -1,8 +1,8 @@
 import React from 'react';
 import './style.css';
 
-const Buttons = ({ tasks, hideFinished }) => {
-    return tasks.length > 0 && (
+const Buttons = ({ tasks, hideFinished }) => (
+    tasks.length > 0 && (
         <div className="gridContainer">
             <button className="gridContainer__button">
                 {hideFinished ? "Show" : "Hide"} finished
@@ -15,5 +15,5 @@ const Buttons = ({ tasks, hideFinished }) => {
             </button>
         </div>
     )
-};
+);
 export default Buttons;
