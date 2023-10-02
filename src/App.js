@@ -4,6 +4,7 @@ import List from './List';
 import Buttons from './Buttons';
 import Section from './Section';
 import Header from './Header';
+import Container from './Container';
 
 const tasks = [
   { id: 1, content: "Spać", done: false },
@@ -13,7 +14,7 @@ const hideFinished = false;
 
 function App() {
   return (
-    <main className="main">
+    <Container>
       <Header title={"To-do list"} />
       <Section
         title={"Add a new task"}
@@ -28,7 +29,7 @@ function App() {
           <List tasks={tasks} hideFinished={hideFinished} />
         }
       />
-    </main>
+    </Container>
   );
 }
 
