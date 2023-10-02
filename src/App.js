@@ -1,6 +1,7 @@
 import React from 'react';
 import Form from './Form';
 import List from './List';
+import Buttons from './Buttons';
 
 const tasks = [
   { id: 1, content: "Spać", done: false },
@@ -22,7 +23,7 @@ function App() {
         <section className="section">
           <header className="header header--second">
             <h2 className="header__title">Task list</h2>
-            <div className="header__gridContainer" />
+            <Buttons tasks={tasks} />
           </header>
           <List tasks={tasks} hideFinished={hideFinished} />
         </section>
