@@ -10,18 +10,14 @@
 }
 
 .section__header {
-    margin: auto;
+    margin: 0 auto;
     border-bottom: rgb(226, 226, 226) solid 2px;
-}
-
-.section__header--extraContent {
-    margin-top: 0;
     display: grid;
     grid-template-columns: 1fr 300px;
 }
 
 @media (max-width: 767px) {
-    .section__header--extraContent {
+    .section__header {
         grid-template-columns: 1fr;
     }
 }
