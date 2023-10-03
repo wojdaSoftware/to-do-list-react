@@ -3,14 +3,14 @@
     list-style: none;
 }
 
-.list__listItem {
+.list__item {
     border-bottom: rgb(226, 226, 226) solid 2px;
     display: grid;
     grid-template-columns: auto 1fr auto;
     gap: 20px;
 }
 
-.list__listItem--hidden {
+.list__item--hidden {
     display: none;
 }
 
