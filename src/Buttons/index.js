@@ -3,12 +3,12 @@ import './style.css';
 
 const Buttons = ({ tasks, hideFinished }) => (
     tasks.length > 0 && (
-        <div className="gridContainer">
-            <button className="gridContainer__button">
+        <div className="buttons">
+            <button className="buttons__button">
                 {hideFinished ? "Show" : "Hide"} finished
             </button>
             <button
-                className="gridContainer__button"
+                className="buttons__button"
                 disabled={tasks.every(({ done }) => done)}
             >
                 Finish all
