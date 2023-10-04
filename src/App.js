@@ -21,6 +21,15 @@ function App() {
     setTasks(tasks => tasks.filter(task => task.id !== id));
   };
 
+  const markTask = (id) => {
+    setTasks(tasks => tasks.map((task) => {
+      if (task.id === id) {
+        return { ...task, done: !task.done }
+      };
+      return task;
+    }));
+  };
+
   return (
     <Container>
       <Header title={"To-do list"} />
@@ -42,6 +51,7 @@ function App() {
             tasks={tasks}
             hideFinished={hideFinished}
             removeTask={removeTask}
+            markTask={markTask}
           />
         }
       />
