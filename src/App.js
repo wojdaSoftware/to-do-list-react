@@ -6,17 +6,19 @@ import Section from './Section';
 import Header from './Header';
 import Container from './Container';
 
-const tasks = [
-  { id: 1, content: "Spać", done: false },
-  { id: 2, content: "Grać", done: true },
-];
-
-
 function App() {
   const [hideFinished, setHideFinished] = useState(false);
+  const [tasks, setTasks] = useState([
+    { id: 1, content: "Spać", done: false },
+    { id: 2, content: "Grać", done: true },
+  ]);
 
   const toggleHideFinished = () => {
     setHideFinished(hideFinished => !hideFinished);
+  };
+
+  const removeTask = (id) => {
+    setTasks(tasks => tasks.filter(task => task.id !== id));
   };
 
   return (
@@ -36,7 +38,11 @@ function App() {
           />
         }
         body={
-          <List tasks={tasks} hideFinished={hideFinished} />
+          <List
+            tasks={tasks}
+            hideFinished={hideFinished}
+            removeTask={removeTask}
+          />
         }
       />
     </Container>
