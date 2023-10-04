@@ -30,6 +30,15 @@ function App() {
     }));
   };
 
+  const markAllTasks = () => {
+    setTasks(tasks => tasks.map((task) => {
+      if (task.done === false) {
+        return {...task, done: !task.done};
+      };
+      return task;
+    }))
+  };
+
   return (
     <Container>
       <Header title={"To-do list"} />
@@ -44,6 +53,7 @@ function App() {
             tasks={tasks}
             hideFinished={hideFinished}
             toggleHideFinished={toggleHideFinished}
+            markAllTasks={markAllTasks}
           />
         }
         body={
