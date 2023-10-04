@@ -33,18 +33,29 @@ function App() {
   const markAllTasks = () => {
     setTasks(tasks => tasks.map((task) => {
       if (task.done === false) {
-        return {...task, done: !task.done};
+        return { ...task, done: !task.done };
       };
       return task;
     }))
   };
+
+  const addTask = (content) => {
+    setTasks(tasks => [
+      ...tasks,
+      {
+        id: tasks.length === 0 ? 1 : tasks[tasks.length - 1].id + 1,
+        content,
+        done: false,
+      },
+    ]);
+  }
 
   return (
     <Container>
       <Header title={"To-do list"} />
       <Section
         title={"Add a new task"}
-        body={<Form />}
+        body={<Form addTask={addTask} />}
       />
       <Section
         title={"Task list"}
