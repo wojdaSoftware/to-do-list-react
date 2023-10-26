@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Form from './Form';
 import List from './List';
 import Buttons from './Buttons';
@@ -8,7 +8,11 @@ import Container from './Container';
 
 function App() {
   const [hideFinished, setHideFinished] = useState(false);
-  const [tasks, setTasks] = useState([]);
+  const [tasks, setTasks] = useState(JSON.parse(localStorage.getItem("tasks")) || []);
+
+	useEffect(() => {
+		localStorage.setItem("tasks", JSON.stringify(tasks));
+	}, [tasks]);
 
   const toggleHideFinished = () => {
     setHideFinished(hideFinished => !hideFinished);
