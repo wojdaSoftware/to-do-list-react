@@ -7,13 +7,16 @@ import Header from './Header';
 import Container from './Container';
 
 function App() {
-  const [hideFinished, setHideFinished] = useState(localStorage.getItem("hideFinished") || false);
+  const [hideFinished, setHideFinished] = useState(JSON.parse(localStorage.getItem("hideFinished")) || false);
   const [tasks, setTasks] = useState(JSON.parse(localStorage.getItem("tasks")) || []);
 
-	useEffect(() => {
-		localStorage.setItem("tasks", JSON.stringify(tasks));
-    localStorage.setItem("hideFinished", hideFinished)
-	}, [tasks, hideFinished]);
+  useEffect(() => {
+    localStorage.setItem("tasks", JSON.stringify(tasks));
+  }, [tasks]);
+
+  useEffect(() => {
+    localStorage.setItem("hideFinished", JSON.stringify(hideFinished));
+  }, [hideFinished]);
 
   const toggleHideFinished = () => {
     setHideFinished(hideFinished => !hideFinished);
