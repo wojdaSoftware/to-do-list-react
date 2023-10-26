@@ -19,6 +19,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
   * ES6+ features
   * Immutability
   * create-react-app
+  * localStorage
 
 ## Site functionality
 
