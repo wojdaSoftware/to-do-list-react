@@ -7,15 +7,17 @@ import Header from './Header';
 import Container from './Container';
 
 function App() {
-  const [hideFinished, setHideFinished] = useState(JSON.parse(localStorage.getItem("hideFinished")) || false);
-  const [tasks, setTasks] = useState(JSON.parse(localStorage.getItem("tasks")) || []);
+  const tasksLocalStorageKey = "tasks";
+  const hideFinishedLocalStorageKey = "hideFinished";
+  const [hideFinished, setHideFinished] = useState(JSON.parse(localStorage.getItem(hideFinishedLocalStorageKey)) || false);
+  const [tasks, setTasks] = useState(JSON.parse(localStorage.getItem(tasksLocalStorageKey)) || []);
 
   useEffect(() => {
-    localStorage.setItem("tasks", JSON.stringify(tasks));
+    localStorage.setItem(tasksLocalStorageKey, JSON.stringify(tasks));
   }, [tasks]);
 
   useEffect(() => {
-    localStorage.setItem("hideFinished", JSON.stringify(hideFinished));
+    localStorage.setItem(hideFinishedLocalStorageKey, JSON.stringify(hideFinished));
   }, [hideFinished]);
 
   const toggleHideFinished = () => {
