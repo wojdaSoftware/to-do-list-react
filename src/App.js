@@ -9,8 +9,13 @@ import Container from './Container';
 function App() {
   const tasksLocalStorageKey = "tasks";
   const hideFinishedLocalStorageKey = "hideFinished";
-  const [hideFinished, setHideFinished] = useState(JSON.parse(localStorage.getItem(hideFinishedLocalStorageKey)) || false);
-  const [tasks, setTasks] = useState(JSON.parse(localStorage.getItem(tasksLocalStorageKey)) || []);
+
+  const getLocalStorageItem = (localStorageKey, noLocalStorageValue) => {
+    return JSON.parse(localStorage.getItem(localStorageKey)) || noLocalStorageValue;
+  };
+
+  const [hideFinished, setHideFinished] = useState(getLocalStorageItem(hideFinishedLocalStorageKey, false));
+  const [tasks, setTasks] = useState(getLocalStorageItem(tasksLocalStorageKey, []));
 
   useEffect(() => {
     localStorage.setItem(tasksLocalStorageKey, JSON.stringify(tasks));
