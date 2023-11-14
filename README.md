@@ -15,6 +15,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
   * Grid
   * Flex
   * Media queries
+  * styled-components
 * Javascript
   * ES6+ features
   * Immutability
