@@ -1,10 +1,29 @@
 import { useState, useEffect } from 'react';
+import { createGlobalStyle } from "styled-components";
 import Form from './Form';
 import List from './List';
 import Buttons from './Buttons';
 import Section from './Section';
 import Header from './Header';
 import Container from './Container';
+
+const GlobalStyle = createGlobalStyle`
+  html {
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  *,
+  ::after,
+  ::before {
+    box-sizing: inherit;
+  }
+
+  body{
+    background-color: rgb(226, 226, 226);
+    margin: 20px;
+  }
+`;
 
 function App() {
   const tasksLocalStorageKey = "tasks";
@@ -65,32 +84,35 @@ function App() {
   }
 
   return (
-    <Container>
-      <Header title={"To-do list"} />
-      <Section
-        title={"Add a new task"}
-        body={<Form addTask={addTask} />}
-      />
-      <Section
-        title={"Task list"}
-        extraHeaderContent={
-          <Buttons
-            tasks={tasks}
-            hideFinished={hideFinished}
-            toggleHideFinished={toggleHideFinished}
-            markAllTasks={markAllTasks}
-          />
-        }
-        body={
-          <List
-            tasks={tasks}
-            hideFinished={hideFinished}
-            removeTask={removeTask}
-            markTask={markTask}
-          />
-        }
-      />
-    </Container>
+    <>
+      <GlobalStyle />
+      <Container>
+        <Header title={"To-do list"} />
+        <Section
+          title={"Add a new task"}
+          body={<Form addTask={addTask} />}
+        />
+        <Section
+          title={"Task list"}
+          extraHeaderContent={
+            <Buttons
+              tasks={tasks}
+              hideFinished={hideFinished}
+              toggleHideFinished={toggleHideFinished}
+              markAllTasks={markAllTasks}
+            />
+          }
+          body={
+            <List
+              tasks={tasks}
+              hideFinished={hideFinished}
+              removeTask={removeTask}
+              markTask={markTask}
+            />
+          }
+        />
+      </Container>
+    </>
   );
 }
 
