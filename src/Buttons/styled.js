@@ -1,28 +1,28 @@
-.buttons {
+import styled from "styled-components";
+
+export const StyledContainer = styled.div`
     display: grid;
     grid-template-columns: 1fr 1fr;
-}
 
-@media (max-width: 767px) {
-    .buttons {
+    @media (max-width: 767px) {
         grid-template-columns: 1fr;
         grid-row-gap: 10px;
         margin-bottom: 10px;
     }
-}
+`;
 
-.buttons__button {
+export const Button = styled.button`
     color: teal;
     background-color: white;
     border: none;
     padding: 0;
     transition: 500ms;
-}
 
-.buttons__button:hover {
+    &:hover {
     color: hsl(180, 100%, 35%);
-}
+    }
 
-.buttons__button:disabled {
+    &:disabled {
     color: rgb(158, 158, 158);
-}
+    }
+`;

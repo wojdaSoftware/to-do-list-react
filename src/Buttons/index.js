@@ -1,22 +1,19 @@
-import './style.css';
+import './styled.js';
+import { StyledContainer, Button } from './styled.js';
 
 const Buttons = ({ tasks, hideFinished, toggleHideFinished, markAllTasks }) => (
     tasks.length > 0 && (
-        <div className="buttons">
-            <button
-                className="buttons__button"
-                onClick={toggleHideFinished}
-            >
+        <StyledContainer>
+            <Button onClick={toggleHideFinished}>
                 {hideFinished ? "Show" : "Hide"} finished
-            </button>
-            <button
-                className="buttons__button"
+            </Button>
+            <Button
                 disabled={tasks.every(({ done }) => done)}
                 onClick={markAllTasks}
             >
                 Finish all
-            </button>
-        </div>
+            </Button>
+        </StyledContainer>
     )
 );
 export default Buttons;
