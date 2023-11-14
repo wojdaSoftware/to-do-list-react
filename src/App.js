@@ -1,11 +1,20 @@
 import { useState, useEffect } from 'react';
-import { createGlobalStyle } from "styled-components";
+import { createGlobalStyle, ThemeProvider } from "styled-components";
 import Form from './Form';
 import List from './List';
 import Buttons from './Buttons';
 import Section from './Section';
 import Header from './Header';
 import Container from './Container';
+
+const theme = {
+  breakpoint: 767,
+  colors: {
+    background: "rgb(226, 226, 226)",
+    primaryColor: "teal",
+    activeColor: "hsl(180, 100%, 35%)",
+  },
+}
 
 const GlobalStyle = createGlobalStyle`
   html {
@@ -84,7 +93,7 @@ function App() {
   }
 
   return (
-    <>
+    <ThemeProvider theme={theme}>
       <GlobalStyle />
       <Container>
         <Header title={"To-do list"} />
@@ -112,7 +121,7 @@ function App() {
           }
         />
       </Container>
-    </>
+    </ThemeProvider>
   );
 }
 
