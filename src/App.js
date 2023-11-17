@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
-import { createGlobalStyle, ThemeProvider } from "styled-components";
+import { ThemeProvider } from "styled-components";
+import { GlobalStyle } from './GlobalStyle';
 import Form from './Form';
 import List from './List';
 import Buttons from './Buttons';
@@ -15,24 +16,6 @@ const theme = {
     activeColor: "hsl(180, 100%, 35%)",
   },
 }
-
-const GlobalStyle = createGlobalStyle`
-  html {
-    box-sizing: border-box;
-    font-family: 'Montserrat', sans-serif;
-  }
-
-  *,
-  ::after,
-  ::before {
-    box-sizing: inherit;
-  }
-
-  body{
-    background-color: rgb(226, 226, 226);
-    margin: 20px;
-  }
-`;
 
 function App() {
   const tasksLocalStorageKey = "tasks";
