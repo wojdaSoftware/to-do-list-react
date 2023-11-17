@@ -10,7 +10,6 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 * HTML
 * CSS
-  * BEM naming convention
   * Normalize.css
   * Grid
   * Flex
@@ -20,6 +19,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
   * ES6+ features
   * Immutability
   * create-react-app
+    * Custom hooks
   * localStorage
 
 ## Site functionality
