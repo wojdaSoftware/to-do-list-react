@@ -18,7 +18,15 @@ const theme = {
 }
 
 function App() {
-  const { tasks, hideFinished, toggleHideFinished, markTask, markAllTasks, addTask, removeTask } = useTasks();
+  const {
+    tasks,
+    hideFinished,
+    toggleHideFinished,
+    markTask,
+    markAllTasks,
+    addTask,
+    removeTask
+  } = useTasks();
 
   return (
     <ThemeProvider theme={theme}>
