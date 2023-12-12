@@ -1,11 +1,11 @@
 import { ThemeProvider } from "styled-components";
 import { GlobalStyle } from './GlobalStyle';
-import Form from './Form';
-import List from './List';
-import Buttons from './Buttons';
-import Section from './Section';
-import Header from './Header';
-import Container from './Container';
+import Form from './features/tasks/Form';
+import List from './features/tasks/List';
+import Buttons from './features/tasks/Buttons';
+import Section from './common/Section';
+import Header from './common/Header';
+import Container from './common/Container'
 import useTasks from './useTasks';
 
 const theme = {
