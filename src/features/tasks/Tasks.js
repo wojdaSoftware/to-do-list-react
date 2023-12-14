@@ -12,8 +12,8 @@ function Tasks() {
 
   const {
     // tasks,
-    hideFinished,
-    toggleHideFinished,
+    // hideFinished,
+    // toggleHideFinished,
     markTask,
     markAllTasks,
     // addTask,
@@ -31,16 +31,11 @@ function Tasks() {
         title={"Task list"}
         extraHeaderContent={
           <Buttons
-            tasks={tasks}
-            hideFinished={hideFinished}
-            toggleHideFinished={toggleHideFinished}
             markAllTasks={markAllTasks}
           />
         }
         body={
           <List
-            tasks={tasks}
-            hideFinished={hideFinished}
             removeTask={removeTask}
             markTask={markTask}
           />
