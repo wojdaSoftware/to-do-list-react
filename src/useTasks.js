@@ -54,7 +54,7 @@ const useTasks = () => {
         }
     }
 
-    return { tasks, hideFinished, toggleHideFinished, removeTask, markTask, markAllTasks, addTask };
+    return { tasks, hideFinished, removeTask, markTask, markAllTasks, addTask };
 }
 
 export default useTasks;
