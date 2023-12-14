@@ -1,8 +1,9 @@
-import { selectTasks } from '../tasksSlice.js';
+import { markTask, selectTasks } from '../tasksSlice.js';
 import { Button, TaskList, TaskListItem, Content } from './styled.js'
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 
-const List = ({ removeTask, markTask }) => {
+const List = ({ removeTask }) => {
+    const dispatch = useDispatch();
     const { tasks, hideFinished } = useSelector(selectTasks);
 
     return (
@@ -12,7 +13,7 @@ const List = ({ removeTask, markTask }) => {
                     key={task.id}
                     hidden={task.done && hideFinished}
                 >
-                    <Button onClick={() => markTask(task.id)}>
+                    <Button onClick={() => dispatch(markTask(task.id))}>
                         {task.done ? "✔" : ""}
                     </Button>
                     <Content marked={task.done}>

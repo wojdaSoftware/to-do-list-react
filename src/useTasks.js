@@ -19,10 +19,6 @@ const useTasks = () => {
         localStorage.setItem(hideFinishedLocalStorageKey, JSON.stringify(hideFinished));
     }, [hideFinished]);
 
-    const toggleHideFinished = () => {
-        setHideFinished(hideFinished => !hideFinished);
-    };
-
     const removeTask = (id) => {
         setTasks(tasks => tasks.filter(task => task.id !== id));
     };
