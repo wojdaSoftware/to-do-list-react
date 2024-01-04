@@ -11,9 +11,9 @@ function Tasks() {
     // hideFinished,
     // toggleHideFinished,
     // markTask,
-    markAllTasks,
+    // markAllTasks,
     // addTask,
-    removeTask
+    // removeTask
   } = useTasks();
 
   return (
@@ -26,14 +26,10 @@ function Tasks() {
       <Section
         title={"Task list"}
         extraHeaderContent={
-          <Buttons
-            markAllTasks={markAllTasks}
-          />
+          <Buttons />
         }
         body={
-          <List
-            removeTask={removeTask}
-          />
+          <List />
         }
       />
     </>

@@ -21,9 +21,12 @@ const taskSlice = createSlice({
             const index = state.tasks.findIndex(task => task.id === action.payload);
             state.tasks.splice(index, 1);
         },
+        markAllTasks: (state) => {
+            state.tasks.forEach(task => task.done = true)
+        },
     }
 });
 
-export const { addTask, toggleHideFinished, markTask, removeTask } = taskSlice.actions;
+export const { addTask, toggleHideFinished, markTask, removeTask, markAllTasks } = taskSlice.actions;
 export const selectTasks = state => state.tasks;
 export default taskSlice.reducer;
