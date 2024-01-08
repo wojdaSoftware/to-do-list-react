@@ -19,14 +19,13 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
   * ES6+ features
   * Immutability
   * create-react-app
-    * Custom hooks
-  * localStorage
+  * Redux
 
 ## Site functionality
 
 ![to-do-list-demo](https://github.com/Kvasir124/to-do-list/assets/141030238/08e2dbf6-97d8-45b4-83c2-b0a1481c4274)
 
-The site's function is to provide the user with a simple to-do list. The user can add tasks by filling out the input field and pressing the "add task" button, which submits the simple form. This causes the task to appear in the list below with two buttons on either side - one for marking the task as done and the other for deleting it. Each submitted task has its own controls, which the user can interact with independently. There are also 2 buttons that appear next to the "Task list" header when the list isn't empty. One of them can mark all undone tasks as done, and the other can hide completed tasks.
+The site's function is to provide the user with a simple to-do list. The user can add tasks by filling out the input field and pressing the "add task" button, which submits the simple form. This causes the task to appear in the list below with two buttons on either side - one for marking the task as done and the other for deleting it. Each submitted task has its own controls, which the user can interact with independently. There are also 2 buttons that appear next to the "Task list" header when the list isn't empty. One of them can mark all undone tasks as done, and the other can hide completed tasks. All tasks and task operations are handled with Redux.
 
 ## Responsiveness
 
