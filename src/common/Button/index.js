@@ -1,7 +1,7 @@
 import { ButtonComponent } from './styled.js';
 
-const Button = ({ buttonText }) => (
-    <ButtonComponent>
+const Button = ({ buttonText, ...props }) => (
+    <ButtonComponent {...props}>
         {buttonText}
     </ButtonComponent>
 );
