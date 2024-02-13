@@ -1,5 +1,6 @@
 import { useSelector, useDispatch } from 'react-redux';
-import { StyledContainer, Button } from './styled.js';
+import { StyledContainer } from './styled.js';
+import Button from '../../../common/Button';
 import { toggleHideFinished, markAllTasks, selectHideFinished, selectAreTasksEmpty, selectIsEveryTaskDone } from '../tasksSlice.js';
 
 const Buttons = () => {
@@ -11,15 +12,15 @@ const Buttons = () => {
     return (
         !areTasksEmpty && (
             <StyledContainer>
-                <Button onClick={() => dispatch(toggleHideFinished())}>
-                    {hideFinished ? "Show" : "Hide"} finished
-                </Button>
+                <Button
+                    onClick={() => dispatch(toggleHideFinished())}
+                    buttonText={hideFinished ? "Show finished" : "Hide finished"}
+                />
                 <Button
                     disabled={isEveryTaskDone}
                     onClick={() => dispatch(markAllTasks())}
-                >
-                    Finish all
-                </Button>
+                    buttonText={"Finish all"}
+                />
             </StyledContainer>
         )
     );
