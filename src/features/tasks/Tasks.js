@@ -1,5 +1,6 @@
 import { useDispatch } from 'react-redux';
 import { fetchExampleTasks } from './tasksSlice';
+import Container from '../../common/Container'
 import Form from './Form';
 import List from './List';
 import Buttons from './Buttons';
@@ -11,7 +12,7 @@ const Tasks = () => {
   const dispatch = useDispatch();
 
   return (
-    <>
+    <Container>
       <Header title={"To-do list"} />
       <Section
         title={"Add a new task"}
@@ -32,7 +33,7 @@ const Tasks = () => {
           <List />
         }
       />
-    </>
+    </Container>
   );
 }
 
