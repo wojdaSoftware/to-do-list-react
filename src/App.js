@@ -1,7 +1,28 @@
+import { HashRouter, Link, Route, Switch } from "react-router-dom/cjs/react-router-dom";
 import Tasks from "./features/tasks/Tasks";
+import Author from "./features/author/Author";
 
 const App = () => (
-    <Tasks />
+  <HashRouter>
+    <nav>
+      <ul>
+        <li>
+          <Link to="/tasks">Tasks</Link>
+        </li>
+        <li>
+          <Link to="/author">About the author</Link>
+        </li>
+      </ul>
+    </nav>
+    <Switch>
+      <Route path="/tasks">
+        <Tasks />
+      </Route>
+      <Route path="/author">
+        <Author />
+      </Route>
+    </Switch>
+  </HashRouter>
 );
 
 export default App;
