@@ -1,15 +1,18 @@
 import Container from "../../common/Container";
 import Header from "../../common/Header";
 import Section from "../../common/Section";
+import { Paragragh } from "./styled";
 
 const Author = () => (
     <Container>
         <Header title={"About the author"} />
         <Section
             title={"Kacper Wojda"}
-            body={<p>
-                lorem ipsum dolor sit amet
-            </p>}
+            body={
+                <Paragragh>
+                    lorem ipsum dolor sit amet
+                </Paragragh>
+            }
         />
     </Container>
 );
