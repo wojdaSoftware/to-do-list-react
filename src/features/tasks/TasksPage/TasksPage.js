@@ -7,6 +7,7 @@ import Container from '../../../common/Container'
 import Section from '../../../common/Section';
 import Header from '../../../common/Header';
 import Button from '../../../common/Button';
+import FilterBar from './FilterBar';
 
 const TasksPage = () => {
   const dispatch = useDispatch();
@@ -23,6 +24,10 @@ const TasksPage = () => {
             buttonText={"Download example tasks"}
           />
         }
+      />
+      <Section
+        title={"Filter"}
+        body={<FilterBar />}
       />
       <Section
         title={"Task list"}
