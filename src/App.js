@@ -1,6 +1,6 @@
 import { HashRouter, Link, Redirect, Route, Switch } from "react-router-dom/cjs/react-router-dom";
-import Tasks from "./features/tasks/Tasks";
-import Author from "./features/author/Author";
+import TasksPage from "./features/tasks/TasksPage/TasksPage";
+import AuthorPage from "./features/author/AuthorPage";
 
 const App = () => (
   <HashRouter>
@@ -15,11 +15,14 @@ const App = () => (
       </ul>
     </nav>
     <Switch>
+      <Route path="/tasks/:id">
+        <TasksPage />
+      </Route>
       <Route path="/tasks">
-        <Tasks />
+        <TasksPage />
       </Route>
       <Route path="/author">
-        <Author />
+        <AuthorPage />
       </Route>
       <Route path="/">
         <Redirect to="/tasks" />

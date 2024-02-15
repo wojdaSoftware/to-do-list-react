@@ -1,14 +1,14 @@
 import { useDispatch } from 'react-redux';
-import { fetchExampleTasks } from './tasksSlice';
-import Container from '../../common/Container'
+import { fetchExampleTasks } from '../tasksSlice';
 import Form from './Form';
 import List from './List';
 import Buttons from './Buttons';
-import Section from '../../common/Section';
-import Header from '../../common/Header';
-import Button from '../../common/Button';
+import Container from '../../../common/Container'
+import Section from '../../../common/Section';
+import Header from '../../../common/Header';
+import Button from '../../../common/Button';
 
-const Tasks = () => {
+const TasksPage = () => {
   const dispatch = useDispatch();
 
   return (
@@ -37,4 +37,4 @@ const Tasks = () => {
   );
 }
 
-export default Tasks;
+export default TasksPage;
