@@ -1,20 +1,12 @@
-import { HashRouter, Link, Redirect, Route, Switch } from "react-router-dom/cjs/react-router-dom";
+import { HashRouter, Redirect, Route, Switch } from "react-router-dom/cjs/react-router-dom";
 import TaskPage from "./features/tasks/TaskPage/TaskPage";
 import TasksPage from "./features/tasks/TasksPage/TasksPage";
 import AuthorPage from "./features/author/AuthorPage";
+import NavBar from "./features/navigation/NavBar";
 
 const App = () => (
   <HashRouter>
-    <nav>
-      <ul>
-        <li>
-          <Link to="/tasks">Tasks</Link>
-        </li>
-        <li>
-          <Link to="/author">About the author</Link>
-        </li>
-      </ul>
-    </nav>
+    <NavBar />
     <Switch>
       <Route path="/tasks/:id">
         <TaskPage />
