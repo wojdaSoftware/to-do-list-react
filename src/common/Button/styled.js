@@ -9,11 +9,15 @@ export const ButtonComponent = styled.button`
     transition: 500ms;
     text-align: right;
 
+    @media (max-width: ${({theme})=> theme.breakpoint}px) {
+        text-align: center;
+    }
+
     &:hover {
-    color: ${({theme})=> theme.colors.activeColor};
+        color: ${({ theme }) => theme.colors.activeColor};
     }
 
     &:disabled {
-    color: rgb(158, 158, 158);
+        color: rgb(158, 158, 158);
     }
 `;

@@ -12,7 +12,7 @@ export const Header = styled.header`
     display: grid;
     grid-template-columns: 1fr 300px;
 
-    @media (max-width: 767px) {
+    @media (max-width: ${({theme})=> theme.breakpoint}px) {
         grid-template-columns: 1fr;
     }
 `;
