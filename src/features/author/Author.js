@@ -1,7 +1,7 @@
 import Container from "../../common/Container";
 import Header from "../../common/Header";
 import Section from "../../common/Section";
-import { Paragragh } from "./styled";
+import { Paragraph } from "./styled";
 
 const Author = () => (
     <Container>
@@ -9,9 +9,12 @@ const Author = () => (
         <Section
             title={"Kacper Wojda"}
             body={
-                <Paragragh>
-                    lorem ipsum dolor sit amet
-                </Paragragh>
+                <>
+                    <Paragraph>W tym roku skończyłem (<em>wreszcie</em>) technikum i
+                        zdecydowałem się na ten kurs, aby poszerzyć swoje kompetencje. Profil informatyka oferuje niewiele w
+                        ramach webdevu, więc trzeba znaleźć inny sposób na rozwój.</Paragraph>
+                    <Paragraph>Pasjonuję się także <b>militariami, grami wideo, TTRPG-ami i muzyką</b>. Uczę się wokalu oraz gry na gitarze i ukulele.</Paragraph>
+                </>
             }
         />
     </Container>

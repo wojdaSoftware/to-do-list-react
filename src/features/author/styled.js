@@ -1,5 +1,5 @@
 import styled from "styled-components";
 
-export const Paragragh = styled.p`
+export const Paragraph = styled.p`
     padding: 0 20px 20px 20px;
 `
