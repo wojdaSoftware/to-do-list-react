@@ -1,4 +1,5 @@
 import { HashRouter, Link, Redirect, Route, Switch } from "react-router-dom/cjs/react-router-dom";
+import TaskPage from "./features/tasks/TaskPage/TaskPage";
 import TasksPage from "./features/tasks/TasksPage/TasksPage";
 import AuthorPage from "./features/author/AuthorPage";
 
@@ -16,7 +17,7 @@ const App = () => (
     </nav>
     <Switch>
       <Route path="/tasks/:id">
-        <TasksPage />
+        <TaskPage />
       </Route>
       <Route path="/tasks">
         <TasksPage />

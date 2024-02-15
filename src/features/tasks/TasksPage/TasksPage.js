@@ -20,7 +20,7 @@ const TasksPage = () => {
         extraHeaderContent={
           <Button
             onClick={() => dispatch(fetchExampleTasks())}
-            buttonText={"Pobierz przykładowe zadania"}
+            buttonText={"Download example tasks"}
           />
         }
       />
