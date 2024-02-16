@@ -14,6 +14,5 @@ export const GlobalStyle = createGlobalStyle`
 
   body{
     background-color: rgb(226, 226, 226);
-    margin: 20px;
   }
 `;

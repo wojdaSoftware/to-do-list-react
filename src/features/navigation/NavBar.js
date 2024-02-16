@@ -1,16 +1,16 @@
-import { Link } from "react-router-dom/cjs/react-router-dom";
+import { Nav, List, StyledNavLink } from "./styled";
 
 const NavBar = () => (
-  <nav>
-    <ul>
+  <Nav>
+    <List>
       <li>
-        <Link to="/tasks">Tasks</Link>
+        <StyledNavLink to="/tasks">Tasks</StyledNavLink>
       </li>
       <li>
-        <Link to="/author">About the author</Link>
+        <StyledNavLink to="/author">About the author</StyledNavLink>
       </li>
-    </ul>
-  </nav>
+    </List>
+  </Nav>
 );
 
 export default NavBar;
