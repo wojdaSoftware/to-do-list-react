@@ -19,6 +19,7 @@ const FilterBar = () => {
         <Wrapper onSubmit={onFormSubmit}>
             <Input
                 noMargin
+                placeholder="Filter tasks"
                 value={filterText}
                 onChange={handleInputChange}
             />
