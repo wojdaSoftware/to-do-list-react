@@ -1,17 +1,29 @@
 import { useState } from "react";
+import { useHistory } from "react-router-dom/cjs/react-router-dom";
 import { Input, Wrapper } from "../Form/styled";
 
 const FilterBar = () => {
-  const [filterText, setFilterText] = useState("");
+    const [filterText, setFilterText] = useState("");
+    const history = useHistory();
 
-  return (
-    <Wrapper>
-        <Input
-            value={filterText}
-            onChange={(event) => setFilterText(event.target.value)}
-        />
-    </Wrapper>
-);
+    const handleInputChange = (event) => {
+        setFilterText(event.target.value);
+        history.push(`?filter=${event.target.value}`);
+    }
+
+    const onFormSubmit = (event) => {
+        event.preventDefault();
+    }
+
+    return (
+        <Wrapper onSubmit={onFormSubmit}>
+            <Input
+                noMargin
+                value={filterText}
+                onChange={handleInputChange}
+            />
+        </Wrapper>
+    );
 };
 
 export default FilterBar;
