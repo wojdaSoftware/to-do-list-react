@@ -1,15 +1,19 @@
 import { useState } from "react";
-import { useHistory } from "react-router-dom/cjs/react-router-dom";
 import { Input, Wrapper } from "../Form/styled";
 import searchQueryParamName from "../../searchQueryParamName";
+import { useReplaceQueryParameter } from "../../queryParameters";
 
 const FilterBar = () => {
     const [filterText, setFilterText] = useState("");
-    const history = useHistory();
+    const replaceQueryParameter = useReplaceQueryParameter();
 
-    const onInputChange = (event) => {
-        setFilterText(event.target.value);
-        history.push(`?${searchQueryParamName}=${event.target.value}`);
+    const onInputChange = ({target}) => {
+        setFilterText(target.value);
+
+        replaceQueryParameter({
+            key: searchQueryParamName,
+            value: target.value.trim() !== "" ? target.value : "",
+        });
     }
 
     const onFormSubmit = (event) => {
