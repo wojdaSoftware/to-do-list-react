@@ -1,6 +1,5 @@
-import { Link } from 'react-router-dom/cjs/react-router-dom.js';
 import { markTask, removeTask, selectHideFinished, selectTasksByQuery } from '../../tasksSlice.js';
-import { Button, TaskList, TaskListItem, Content } from './styled.js'
+import { Button, TaskList, TaskListItem, Content, StyledTaskNavLink } from './styled.js'
 import { useSelector, useDispatch } from 'react-redux';
 import searchQueryParamName from '../../searchQueryParamName.js';
 import { useQueryParameters } from '../../queryParameters.js';
@@ -22,7 +21,7 @@ const List = () => {
             {task.done ? "✔" : ""}
           </Button>
           <Content marked={task.done}>
-            <Link to={`/tasks/${task.id}`}>{task.content}</Link>
+            <StyledTaskNavLink to={`/tasks/${task.id}`}>{task.content}</StyledTaskNavLink>
           </Content>
           <Button
             second

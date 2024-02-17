@@ -1,4 +1,5 @@
 import styled, { css } from "styled-components";
+import { NavLink } from "react-router-dom/cjs/react-router-dom";
 
 export const TaskList = styled.ul`
     padding: 0px 20px 20px 20px;
@@ -48,4 +49,14 @@ export const Content = styled.p`
     ${({ marked }) => marked && css`
         text-decoration: line-through;
     `}
+`;
+
+export const StyledTaskNavLink = styled(NavLink)`
+    text-decoration: none;
+    color: black;
+    transition-duration: 200ms;
+
+    &:hover{
+        color: teal;
+    }
 `;
