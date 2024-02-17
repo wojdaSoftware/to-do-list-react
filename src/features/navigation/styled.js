@@ -35,5 +35,7 @@ export const StyledNavLink = styled(NavLink)`
     box-shadow: 0px -10px 18px -14px rgba(66, 68, 90, 1);
   }
 
-  
+  @media (max-width: ${({ theme }) => theme.breakpoint}px) {
+    width: 170px;
+  }
 `;
