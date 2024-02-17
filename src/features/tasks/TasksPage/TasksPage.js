@@ -1,5 +1,5 @@
-import { useDispatch } from 'react-redux';
-import { fetchExampleTasks } from '../tasksSlice';
+import { useDispatch, useSelector } from 'react-redux';
+import { fetchExampleTasks, selectLoading } from '../tasksSlice';
 import Form from './Form';
 import List from './List';
 import Buttons from './Buttons';
@@ -11,6 +11,7 @@ import FilterBar from './FilterBar';
 
 const TasksPage = () => {
   const dispatch = useDispatch();
+  const loading = useSelector(selectLoading);
 
   return (
     <Container>
@@ -20,8 +21,9 @@ const TasksPage = () => {
         body={<Form />}
         extraHeaderContent={
           <Button
+            disabled = {loading}
             onClick={() => dispatch(fetchExampleTasks())}
-            buttonText={"Download example tasks"}
+            buttonText={loading ? "Loading..." : "Download example tasks"}
           />
         }
       />

@@ -1,12 +1,17 @@
-import { takeEvery, call, put, takeLatest, select } from "redux-saga/effects";
-import { setTasks, fetchExampleTasks, selectTasks } from "./tasksSlice";
+import { takeEvery, call, put, takeLatest, select, delay, all } from "redux-saga/effects";
+import { setTasks, fetchExampleTasks, selectTasks, toggleLoading } from "./tasksSlice";
 import { getExampleTasks } from "./getExampleTasks";
 import { saveTasksInLocalStorage } from "./tasksLocalStorage";
 
 function* fetchExampleTasksHandler() {
     try {
+        yield put(toggleLoading());
+        yield delay(1500);
         const exampleTasks = yield call(getExampleTasks);
-        yield put(setTasks(exampleTasks));
+        yield all([
+            put(toggleLoading()),
+            put(setTasks(exampleTasks)),
+        ])
     } catch (error) {
         yield call(alert, "Coś poszło nie tak!")
     }

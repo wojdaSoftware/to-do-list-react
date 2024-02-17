@@ -6,18 +6,18 @@ export const ButtonComponent = styled.button`
     border: none;
     padding: 0;
     padding-right: 20px;
-    transition: 500ms;
+    transition: 250ms;
     text-align: right;
 
     @media (max-width: ${({theme})=> theme.breakpoint}px) {
         text-align: center;
-    }
+    };
 
     &:hover {
         color: ${({ theme }) => theme.colors.activeColor};
-    }
-
+    };
+    
     &:disabled {
         color: rgb(158, 158, 158);
-    }
+    };
 `;
