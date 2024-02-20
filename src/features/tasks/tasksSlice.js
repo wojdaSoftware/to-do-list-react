@@ -32,7 +32,7 @@ const taskSlice = createSlice({
         },
         toggleLoading: (state) => {
             state.loading = !state.loading;
-          },
+        },
     }
 });
 
