@@ -19,13 +19,17 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
   * ES6+ features
   * Immutability
   * create-react-app
-  * Redux
+    * Redux
+      * Redux-Saga
+    * React Router
 
 ## Site functionality
 
-![to-do-list-demo](https://github.com/Kvasir124/to-do-list/assets/141030238/08e2dbf6-97d8-45b4-83c2-b0a1481c4274)
+![to-do-list-demo](https://github.com/Kvasir124/to-do-list-react/assets/141030238/59bb15e3-cca8-41bb-a231-a6af5b0987cc)
 
-The site's function is to provide the user with a simple to-do list. The user can add tasks by filling out the input field and pressing the "add task" button, which submits the simple form. This causes the task to appear in the list below with two buttons on either side - one for marking the task as done and the other for deleting it. Each submitted task has its own controls, which the user can interact with independently. There are also 2 buttons that appear next to the "Task list" header when the list isn't empty. One of them can mark all undone tasks as done, and the other can hide completed tasks. All tasks and task operations are handled with Redux.
+
+
+The site's function is to provide the user with a simple to-do list. The user can add tasks by filling out the input field and pressing the "add task" button, which submits the simple form. This causes the task to appear in the list below with two buttons on either side - one for marking the task as done and the other for deleting it. Tasks are stored in LocalStorage, so they persist through refreshes and repeated visits. Each submitted task has its own controls, which the user can interact with independently. Two buttons appear next to the "Task list" header when the list isn't empty. One of them can mark all undone tasks as done, and the other can hide completed tasks. All tasks and task operations are handled with Redux. You can download example tasks. This is handled with Redux-Saga. Each task has its own subpage. There is also an "About the author" subpage, which can be accessed through the app's navigation bar at the top of the screen. Navigation through the subpages is handled by React Router.
 
 ## Responsiveness
 
