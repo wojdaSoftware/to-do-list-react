@@ -25,7 +25,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Site functionality
 
-![to-do-list-demo](https://github.com/Kvasir124/to-do-list-react/assets/141030238/59bb15e3-cca8-41bb-a231-a6af5b0987cc)
+![to-do-list-demo](https://github.com/wojdaSoftware/to-do-list-react/assets/141030238/59bb15e3-cca8-41bb-a231-a6af5b0987cc)
 
 
 
