@@ -2,7 +2,7 @@
 
 Add, remove, and mark finished or unfinished tasks.
 
-Check the site [**here**](https://kvasir124.github.io/to-do-list-react/).
+Check the site [**here**](https://wojdaSoftware.github.io/to-do-list-react/).
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
